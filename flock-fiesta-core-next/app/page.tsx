@@ -1,6 +1,9 @@
 import { CallToAction } from "./call-to-action";
+import { Goal } from "./goal";
+import { HowDoesItWork } from "./how-does-it-work";
 import { Illustrations } from "./illustrations";
 import { Statistics } from "./statistics";
+import { References } from "./references";
 
 export default function Home() {
   return (
@@ -23,8 +26,13 @@ export default function Home() {
           <Illustrations />
         </main>
       </div>
-
-      <Statistics />
+      <div className="flex justify-center mt-24">
+        <div className="w-2/3">
+          <Statistics />
+          <Goal />
+          <HowDoesItWork />
+        </div>
+      </div>
     </div>
   );
 }

@@ -33,13 +33,11 @@ export const Statistics = () => {
     );
   };
   return (
-    <div className="flex justify-center mt-24">
-      <div className="w-2/3 flex justify-between items-center space-x-16">
-        <Counter label="Events Created" actualValue={5000} />
-        <Counter label="Companies Registered" actualValue={400} />
-        <Counter label="People Attended" actualValue={17000} />
-        <Counter label="To Do" actualValue={1000} />
-      </div>
+    <div className="flex justify-between items-center space-x-16">
+      <Counter label="Events Created" actualValue={5000} />
+      <Counter label="Companies Registered" actualValue={400} />
+      <Counter label="People Attended" actualValue={17000} />
+      <Counter label="To Do" actualValue={1000} />
     </div>
   );
 };
