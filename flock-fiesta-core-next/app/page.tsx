@@ -1,5 +1,6 @@
 import { CallToAction } from "./call-to-action";
 import { Illustrations } from "./illustrations";
+import { Statistics } from "./statistics";
 
 export default function Home() {
   return (
@@ -17,11 +18,13 @@ export default function Home() {
         </div>
       </header>
       <div className="flex justify-center mt-24">
-        <main className="w-2/3 flex ">
+        <main className="w-2/3 flex">
           <CallToAction />
           <Illustrations />
         </main>
       </div>
+
+      <Statistics />
     </div>
   );
 }
