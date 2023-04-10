@@ -1,5 +1,6 @@
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs/app-beta";
+import Link from "next/link";
 
 export const metadata = {
   title: "Flock Fiesta",
@@ -30,7 +31,25 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <header className="flex justify-center p-6">
+            <div className="w-2/3 flex items-center space-x-24">
+              <div className="text-xl font-bold lowercase">
+                <Link href="/">Flock Fiesta</Link>
+              </div>
+              <nav>
+                <ul className="list-none flex space-x-12">
+                  <li>How it works</li>
+                  <li>Pricing</li>
+                  <li>Contact</li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div className="flex justify-center mt-24 px-6">
+            <div className="w-2/3">{children}</div>
+          </div>
+        </body>
       </html>
     </ClerkProvider>
   );

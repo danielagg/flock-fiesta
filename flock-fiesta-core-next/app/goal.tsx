@@ -3,7 +3,7 @@ export const Goal = () => {
     <div className="mt-40 flex flex-col items-center justify-center">
       <div className="text-center flex flex-col items-center justify-center">
         <div className="text-3xl font-extrabold">
-          Culture-building made easy, one event at a time.
+          How does Flock Fiesta work?
         </div>
         <div className="mt-8 w-2/3">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
