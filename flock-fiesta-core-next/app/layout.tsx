@@ -46,8 +46,8 @@ export default function RootLayout({
               </nav>
             </div>
           </header>
-          <div className="flex justify-center mt-24 px-6">
-            <div className="w-2/3">{children}</div>
+          <div className="flex flex-col justify-center items-center mt-24">
+            {children}
           </div>
         </body>
       </html>
