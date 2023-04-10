@@ -13,7 +13,7 @@ export const Illustrations = () => {
 
   return (
     <animated.aside
-      className="w-1/2 relative min-h-[750px]"
+      className="w-1/2 relative min-h-[700px]"
       style={{
         transform: rightToLeft.x.to((x) => `translateX(${x}px)`),
         opacity: rightToLeft.opacity,

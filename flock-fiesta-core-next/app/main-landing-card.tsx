@@ -22,8 +22,8 @@ export const MainLandingCard = () => {
     <animated.div
       style={{ transform: spring.y.to((y) => `translateY(${y}px)`) }}
     >
-      <div className="absolute inset-0 ml-[50px] mt-[50px] w-[350px] h-[550px] bg-slate-900 rounded-3xl z-10"></div>
-      <div className="absolute inset-0 w-[450px] h-[650px] bg-gradient-to-tl from-slate-600 to-slate-200 rounded-3xl z-0 opacity-50"></div>
+      <div className="absolute inset-0 ml-[40px] mt-[40px]   w-[300px] h-[500px] bg-slate-900 rounded-3xl z-10"></div>
+      <div className="absolute inset-0 w-[380px] h-[580px] bg-gradient-to-tl from-slate-600 to-slate-200 rounded-3xl z-0 opacity-50"></div>
     </animated.div>
   );
 };

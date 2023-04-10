@@ -17,7 +17,7 @@ export default function Home() {
         </div>
       </header>
       <div className="flex justify-center mt-24">
-        <main className="w-2/3 flex items-center">
+        <main className="w-2/3 flex ">
           <CallToAction />
           <Illustrations />
         </main>
