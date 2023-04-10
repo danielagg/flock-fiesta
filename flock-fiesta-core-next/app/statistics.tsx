@@ -24,8 +24,8 @@ export const Statistics = () => {
     }, [actualValue, value]);
 
     return (
-      <div className="px-12 py-20 bg-slate-200 w-[300px] text-center rounded-xl">
-        <div className="text-4xl font-bold">
+      <div className="px-3 lg:px-12 py-6 lg:py-20 bg-slate-200 w-[300px] text-center rounded-xl">
+        <div className="text-2xl lg:text-4xl font-bold">
           <span>{value == actualValue ? `${value}+` : value}</span>
         </div>
         <div className="text-sm">{label}</div>
@@ -33,7 +33,7 @@ export const Statistics = () => {
     );
   };
   return (
-    <div className="flex justify-between items-center space-x-16">
+    <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0 lg:space-x-16 mt-24 lg:mt-0">
       <Counter label="Events Created" actualValue={5000} />
       <Counter label="Companies Registered" actualValue={400} />
       <Counter label="People Attended" actualValue={17000} />

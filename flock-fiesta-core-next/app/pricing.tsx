@@ -11,8 +11,8 @@ export const Pricing = () => {
     additionalInfo: string[];
   }) => {
     return (
-      <div className="w-1/3">
-        <div className=" p-12 rounded-lg border-2 border-slate-600">
+      <div className="w-full lg:w-1/3">
+        <div className="p-6 lg:p-12 rounded-lg border-2 border-slate-600">
           <div className="bg-slate-800 rounded-full px-4 py-2 inline-block text-xs">
             {planName}
           </div>
@@ -25,8 +25,8 @@ export const Pricing = () => {
             Get Started
           </button>
         </div>
-        <div className="mt-12 pl-4 text-xs">
-          <ul className=" list-inside space-y-2 opacity-60">
+        <div className="mt-2 lg:mt-12 pl-2 lg:pl-4 text-xs">
+          <ul className="list-inside space-y-2 opacity-60">
             {additionalInfo.map((info, index) => {
               return (
                 <li key={index} className="flex items-center space-x-2">
@@ -55,10 +55,12 @@ export const Pricing = () => {
     );
   };
   return (
-    <div className="text-white w-2/3 p-32">
-      <div className="text-5xl font-extrabold text-center">Our Pricing</div>
+    <div className="text-white w-full lg:w-2/3 p-12 lg:p-32">
+      <div className="text-3xl lg:text-5xl font-extrabold text-center">
+        Our Pricing
+      </div>
 
-      <div className="mt-16 flex items-start space-x-4 justify-between">
+      <div className="mt-12 lg:mt-16 flex flex-col lg:flex-row items-start space-y-12 lg:space-y-0 lg:space-x-4 justify-between">
         <Card
           planName="Free Tier"
           price={0}

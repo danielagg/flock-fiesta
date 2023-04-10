@@ -16,9 +16,9 @@ export const CallToAction = () => {
   });
 
   return (
-    <section className="w-1/2 mt-40">
+    <section className="w-full lg:w-1/2 lg:mt-40">
       <animated.div
-        className="text-5xl font-extrabold"
+        className="text-3xl lg:text-5xl font-extrabold"
         style={{
           transform: topToBottom.y.to((y) => `translateY(${y}px)`),
           opacity: topToBottom.opacity,
@@ -27,7 +27,7 @@ export const CallToAction = () => {
         Culture-building made easy, one event at a time.
       </animated.div>
       <animated.div
-        className="text-base mt-8 w-4/5"
+        className="text-base mt-8 w-full lg:w-4/5"
         style={{
           transform: bottomToTop.x.to((x) => `translateX(${x}px)`),
           opacity: bottomToTop.opacity,

@@ -8,8 +8,8 @@ import { Statistics } from "./statistics";
 export default function Home() {
   return (
     <>
-      <div className="w-2/3 px-6">
-        <main className="flex">
+      <div className="w-full lg:w-2/3 px-6">
+        <main className="flex flex-col lg:flex-row">
           <CallToAction />
           <Illustrations />
         </main>

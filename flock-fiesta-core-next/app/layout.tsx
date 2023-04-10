@@ -32,13 +32,13 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <header className="flex justify-center p-6">
-            <div className="w-2/3 flex items-center space-x-24">
+          <header className="block lg:flex justify-center p-6 bg-slate-900 lg:bg-white text-white lg:text-black">
+            <div className="w-full lg:w-2/3 flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:space-x-24">
               <div className="text-xl font-bold lowercase">
                 <Link href="/">Flock Fiesta</Link>
               </div>
-              <nav>
-                <ul className="list-none flex space-x-12">
+              <nav className="hidden lg:block">
+                <ul className="list-none flex flex-col lg:flex-row space-y-2 space-x-0 lg:space-y-0 lg:space-x-12 items-center mt-6 lg:mt-0">
                   <li>How it works</li>
                   <li>Pricing</li>
                   <li>Contact</li>
@@ -46,7 +46,7 @@ export default function RootLayout({
               </nav>
             </div>
           </header>
-          <div className="flex flex-col justify-center items-center mt-24">
+          <div className="flex flex-col justify-center items-center mt-12 lg:mt-24">
             {children}
           </div>
         </body>

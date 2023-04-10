@@ -11,8 +11,8 @@ export const HowDoesItWork = () => {
     return (
       <div className="flex flex-col text-center justify-center items-center">
         <div>{logo}</div>
-        <div className="mt-4 text-2xl font-bold">{title}</div>
-        <div className="mt-2">{desc}</div>
+        <div className="mt-4 text-xl lg:text-2xl font-bold">{title}</div>
+        <div className="mt-2 text-sm lg:text-base">{desc}</div>
       </div>
     );
   };
@@ -25,7 +25,7 @@ export const HowDoesItWork = () => {
           viewBox="0 0 24 24"
           strokeWidth={0.75}
           stroke="currentColor"
-          className="w-32 h-32"
+          className="w-16 h-16 lg:w-32 lg:h-32"
         >
           <path
             strokeLinecap="round"
@@ -50,7 +50,7 @@ export const HowDoesItWork = () => {
           viewBox="0 0 24 24"
           strokeWidth={0.75}
           stroke="currentColor"
-          className="w-32 h-32"
+          className="w-16 h-16 lg:w-32 lg:h-32"
         >
           <path
             strokeLinecap="round"
@@ -70,7 +70,7 @@ export const HowDoesItWork = () => {
           viewBox="0 0 24 24"
           strokeWidth={0.75}
           stroke="currentColor"
-          className="w-32 h-32"
+          className="w-16 h-16 lg:w-32 lg:h-32"
         >
           <path
             strokeLinecap="round"
@@ -85,8 +85,8 @@ export const HowDoesItWork = () => {
   ];
 
   return (
-    <div className="mt-4 flex flex-col items-center justify-center">
-      <div className="flex items-center space-x-12 p-24 ">
+    <div className="mt-4 flex flex-col lg:flex-row items-center justify-center">
+      <div className="flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12 p-12 lg:p-24">
         {steps.map((step, index) => {
           return (
             <Counter
