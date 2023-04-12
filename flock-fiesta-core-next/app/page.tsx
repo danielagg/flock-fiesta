@@ -7,7 +7,7 @@ import { Pricing } from "./components/pricing";
 import { Statistics } from "./components/statistics";
 import { UserButton } from "@clerk/nextjs/app-beta";
 
-export default function Home() {
+const Home = () => {
   return (
     <body className="bg-gradient-to-tl from-purple-200 to-indigo-50 text-slate-900 min-h-screen">
       <header className="block lg:flex justify-center p-6 bg-slate-900 lg:bg-transparent text-white lg:text-black">
@@ -41,4 +41,6 @@ export default function Home() {
       </div>
     </body>
   );
-}
+};
+
+export default Home;

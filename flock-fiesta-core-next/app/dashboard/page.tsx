@@ -1,3 +1,21 @@
-export default function Page() {
-  return <div>Hello</div>;
-}
+import Link from "next/link";
+import { Navigation } from "./components/navigation";
+import { HighlightedEvent } from "./components/highlightedEvent";
+
+const Page = () => {
+  return (
+    <div className="bg-zinc-950 text-zinc-500 flex items-start">
+      <aside className="w-1/5 bg-black border-r-2 border-zinc-800 pt-20 px-12">
+        <div className="w-32 text-2xl font-bold lowercase">
+          <Link href="/dashboard">Flock Fiesta</Link>
+        </div>
+        <Navigation />
+      </aside>
+      <main className="w-4/5">
+        <HighlightedEvent />
+      </main>
+    </div>
+  );
+};
+
+export default Page;

@@ -2,7 +2,7 @@
 
 import { useAuth } from "@clerk/nextjs";
 import { animated, useSpring } from "@react-spring/web";
-import Link from "next/link";
+import { RedirectionButton } from "../shared/redirectionButton";
 
 export const CallToAction = () => {
   const { userId } = useAuth();
@@ -49,17 +49,11 @@ export const CallToAction = () => {
         className="flex items-center space-x-2 mt-8"
       >
         {userId ? (
-          <button className="border-purple-700 border-2 bg-purple-700 text-white py-2 w-64 rounded">
-            <Link href="/dashboard">Go to my Dashboard</Link>
-          </button>
+          <RedirectionButton label="Go to my Dashboard" href="/dashboard" />
         ) : (
           <>
-            <button className="border-purple-700 border-2 bg-purple-700 text-white py-2 w-40 rounded">
-              <Link href="/sign-up">Sign Up</Link>
-            </button>
-            <button className="border-purple-700 border-2 bg-purple-50 py-2 rounded w-40 text-purple-700">
-              <Link href="/sign-in">Login</Link>
-            </button>
+            <RedirectionButton label="Sign Up" href="/sign-up" />
+            <RedirectionButton label="Login" href="/sign-in" unfilled />
           </>
         )}
       </animated.div>
