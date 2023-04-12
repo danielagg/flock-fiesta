@@ -25,7 +25,7 @@ export const HowDoesItWork = () => {
           viewBox="0 0 24 24"
           strokeWidth={0.75}
           stroke="currentColor"
-          className="w-16 h-16 lg:w-32 lg:h-32"
+          className="text-purple-800 w-16 h-16 lg:w-32 lg:h-32"
         >
           <path
             strokeLinecap="round"
@@ -50,7 +50,7 @@ export const HowDoesItWork = () => {
           viewBox="0 0 24 24"
           strokeWidth={0.75}
           stroke="currentColor"
-          className="w-16 h-16 lg:w-32 lg:h-32"
+          className="text-purple-800 w-16 h-16 lg:w-32 lg:h-32"
         >
           <path
             strokeLinecap="round"
@@ -70,7 +70,7 @@ export const HowDoesItWork = () => {
           viewBox="0 0 24 24"
           strokeWidth={0.75}
           stroke="currentColor"
-          className="w-16 h-16 lg:w-32 lg:h-32"
+          className="text-purple-800 w-16 h-16 lg:w-32 lg:h-32"
         >
           <path
             strokeLinecap="round"

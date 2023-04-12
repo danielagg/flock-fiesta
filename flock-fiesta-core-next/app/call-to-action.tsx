@@ -1,15 +1,19 @@
 "use client";
 
+import { useAuth } from "@clerk/nextjs";
 import { animated, useSpring } from "@react-spring/web";
+import Link from "next/link";
 
 export const CallToAction = () => {
+  const { userId } = useAuth();
+
   const topToBottom = useSpring({
     from: { y: -250, opacity: 0 },
     to: { y: 0, opacity: 1 },
     config: { duration: 150 },
   });
 
-  const bottomToTop = useSpring({
+  const leftToRight = useSpring({
     from: { x: -250, opacity: 0 },
     to: { x: 0, opacity: 1 },
     config: { duration: 150 },
@@ -29,22 +33,36 @@ export const CallToAction = () => {
       <animated.div
         className="text-base mt-8 w-full lg:w-4/5"
         style={{
-          transform: bottomToTop.x.to((x) => `translateX(${x}px)`),
-          opacity: bottomToTop.opacity,
+          transform: leftToRight.x.to((x) => `translateX(${x}px)`),
+          opacity: leftToRight.opacity,
         }}
       >
         From team-building retreats to happy hours, with Flock Fiesta your team
         can plan and manage events from start to finish, with all the resources
         they need at their fingertips.
       </animated.div>
-      <div className="flex items-center space-x-2 mt-8">
-        <button className="border-slate-900 border-2 bg-slate-900 text-white py-2 px-6 rounded">
-          Sign Up
-        </button>
-        <button className="border-slate-900 border-2 py-2 px-6 rounded">
-          Login
-        </button>
-      </div>
+      <animated.div
+        style={{
+          transform: leftToRight.x.to((x) => `translateX(${x}px)`),
+          opacity: leftToRight.opacity,
+        }}
+        className="flex items-center space-x-2 mt-8"
+      >
+        {userId ? (
+          <button className="border-purple-700 border-2 bg-purple-700 text-white py-2 w-64 rounded">
+            <Link href="/dashboard">Go to my Dashboard</Link>
+          </button>
+        ) : (
+          <>
+            <button className="border-purple-700 border-2 bg-purple-700 text-white py-2 w-40 rounded">
+              <Link href="/sign-up">Sign Up</Link>
+            </button>
+            <button className="border-purple-700 border-2 bg-purple-50 py-2 rounded w-40 text-purple-700">
+              <Link href="/sign-in">Login</Link>
+            </button>
+          </>
+        )}
+      </animated.div>
     </section>
   );
 };

@@ -62,13 +62,13 @@ export const Pricing = () => {
 
       <div className="mt-12 lg:mt-16 flex flex-col lg:flex-row items-start space-y-12 lg:space-y-0 lg:space-x-4 justify-between">
         <Card
-          planName="Free Tier"
+          planName="Free"
           price={0}
           desc="Suitable for up and coming organizations, limited to 12 users."
           additionalInfo={[
-            "Unlimited number of events can be created.",
             "Guaranteed access up to 12 users.",
-            "Test 3.",
+            "Unlimited number of events can be created.",
+            "Restricted customizability (default event types)",
           ]}
         />
         <Card
@@ -76,8 +76,9 @@ export const Pricing = () => {
           price={99}
           desc="Suitable for any organization up to 99 users."
           additionalInfo={[
-            "All features from the Free Tier included.",
+            "All features from the Free tier included.",
             "Guaranteed access up to 99 users.",
+            "Create custom event categories",
           ]}
         />
         <Card

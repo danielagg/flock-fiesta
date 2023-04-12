@@ -19,12 +19,12 @@ export const Statistics = () => {
         } else {
           clearInterval(timer);
         }
-      }, 3);
+      }, 7);
       return () => clearInterval(timer);
     }, [actualValue, value]);
 
     return (
-      <div className="px-3 lg:px-12 py-6 lg:py-20 bg-slate-200 w-[300px] text-center rounded-xl">
+      <div className="px-3 lg:px-12 py-6 lg:py-20 bg-violet-50 border-violet-200 border shadow-lg w-[300px] text-center rounded-xl">
         <div className="text-2xl lg:text-4xl font-bold">
           <span>{value == actualValue ? `${value}+` : value}</span>
         </div>
