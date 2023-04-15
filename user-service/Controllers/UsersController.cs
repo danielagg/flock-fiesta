@@ -1,6 +1,7 @@
 
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 [Route("/")]
 public class UsersController : ControllerBase
@@ -9,7 +10,7 @@ public class UsersController : ControllerBase
     
     public UsersController(IUsersAppService appService)
     {
-        _appService = appService;    
+        _appService = appService;
     }
 
     [HttpPost]
@@ -25,5 +26,22 @@ public class UsersController : ControllerBase
         // todo:
         await Task.Delay(100);
         return Ok();
+    }
+
+
+    [Authorize]
+    [HttpGet("test1")]
+    public async Task<IActionResult> GetTest1()
+    {
+        await Task.Delay(10);
+        return Ok(new { Message = "Worked with JTW!"});
+    }
+
+    [AllowAnonymous]
+    [HttpGet("test2")]
+    public async Task<IActionResult> GetTest2()
+    {
+        await Task.Delay(10);
+        return Ok(new { Message = "Worked with Allow Anon!"});
     }
 }
