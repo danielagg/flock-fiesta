@@ -1,11 +1,27 @@
 "use client";
 
 import { RedirectionButton } from "@/app/shared/redirectionButton";
-import { useUser } from "@clerk/nextjs";
+import { useSession, useUser, useClerk } from "@clerk/nextjs";
 
 export const Navigation = () => {
   const user = useUser();
+  const session = useSession();
+  const clerk = useClerk();
   console.log(user);
+
+  session
+    .session!.getToken({
+      template: "CustomJWT",
+    })
+    .then((x) => console.log(x));
+
+  // session.session?.getToken().then((x) => console.log(x));
+
+  // try {
+  //   Clerk.session.getToken({ template: 'my-template-1' })
+  // } catch(e) {
+  //     // handle error
+  // }
 
   const Item = ({
     icon,
