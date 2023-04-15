@@ -1,6 +1,12 @@
+"use client";
+
 import { RedirectionButton } from "@/app/shared/redirectionButton";
+import { useUser } from "@clerk/nextjs";
 
 export const Navigation = () => {
+  const user = useUser();
+  console.log(user);
+
   const Item = ({
     icon,
     label,

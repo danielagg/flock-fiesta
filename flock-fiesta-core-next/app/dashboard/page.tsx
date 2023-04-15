@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Navigation } from "./components/navigation";
 import { HighlightedEvent } from "./components/highlightedEvent";
+import { UpcomingEvents } from "./components/upcomingEvents";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       </aside>
       <main className="w-4/5">
         <HighlightedEvent />
+        <UpcomingEvents />
       </main>
     </div>
   );
