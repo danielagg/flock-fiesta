@@ -1,5 +1,9 @@
 import { SignUp } from "@clerk/nextjs/app-beta";
 
 export default function Page() {
-  return <SignUp signInUrl="/sign-in" />;
+  return (
+    <div className="flex items-center justify-center bg-gradient-to-tl from-purple-200 to-indigo-50 w-full min-h-screen">
+      <SignUp signInUrl="/sign-in" />;
+    </div>
+  );
 }
